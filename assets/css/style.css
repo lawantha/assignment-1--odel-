@@ -1,0 +1,143 @@
+html body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.container-fluid {
+    padding: 50px 0;
+    position: relative;
+}
+
+.carousel {
+    position: absolute;
+    z-index: 1;
+}
+
+.cr-1 {
+    overflow: hidden;
+}
+
+.car-item img {
+    height: auto;
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+    top: -90px;
+}
+
+/* menu items */
+
+.menu {
+    color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    /* font-weight: bold; */
+    margin: 10px;
+}
+
+.title {
+    padding: 4px 10px;
+    background-color: #222;
+}
+
+.title:hover {
+    color: #ffc107;
+    cursor: pointer;
+}
+
+.menu-items {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0px !important;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu-item {
+    padding: 4px 10px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+.menu-items ::after {
+    position: relative;
+    top: 1px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(247, 222, 0);
+    transform: scale(0, 1) scaleX(1);
+    /* transform-origin: 20% 40%; */
+    transition: transform 0.3s ease-in-out;
+    background-size: 50px 10px;
+}
+
+.menu-items .active ::after {
+    transform: scale(1, 1) scaleX(1);
+}
+
+
+/* product carousel */
+
+.owl-two {
+    padding: 0px !important;
+}
+
+.owl-two .car-item {
+    width: max-content;
+}
+
+.cr-2 .car-item {
+    width: auto;
+}
+
+/* navigation buttons */
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(109, 105, 105, 0.411) !important;
+    width: 15px !important;
+    height: 30px !important;
+    color: #fff;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-nav button.owl-prev {
+    left: -20px;
+}
+
+.owl-nav button.owl-next {
+    right: -20px;
+}
+
+@media screen and (max-width: 720px) {
+    html body {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    html body {
+        font-size: 10px;
+    }
+}
