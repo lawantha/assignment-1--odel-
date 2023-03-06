@@ -12,6 +12,7 @@ html body {
     position: relative;
 }
 
+
 .carousel {
     display: block;
     position: absolute;
@@ -172,6 +173,19 @@ html body {
     padding: 5% 0 0 5%;
 }
 
+.top-btn {
+    position: absolute;
+    background-color: #ff2d55;
+    border-style: solid 0px;
+    border-radius: 15px;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    text-align: center;
+    color: aliceblue;
+
+}
+
 .hidden {
     display: none;
 }
@@ -179,6 +193,11 @@ html body {
 @media screen and (max-width: 500px) {
     html body {
         font-size: 10px;
+    }
+
+    .container {
+        padding-right: calc(var(--bs-gutter-x) * 0) !important;
+        padding-left: calc(var(--bs-gutter-x) * 0) !important;
     }
 
     .carousel {
@@ -214,5 +233,4 @@ html body {
     .owl-item.active {
         scale: 0.9;
     }
-
 }
