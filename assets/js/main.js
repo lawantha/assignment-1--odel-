@@ -9,7 +9,16 @@ $(document).ready(function () {
             lazyLoad: true,
             autoplayTimeout: 1000,
             autoplayHoverPause: true,
-            items: 1
+            items: 1,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 0,
+                },
+                500: {
+                    items: 1
+                }
+            }
         }
     );
 
@@ -28,11 +37,20 @@ $(document).ready(function () {
             autoplay: false,
             dots: false,
             lazyLoad: true,
-            autoplayTimeout: 1000,
-            autoplayHoverPause: true,
             items: 2,
+            nav: true,
+            navText: ["<i class='fas fa-angle-double-left'></i>", "<i class='fas fa-angle-double-right'></i>"],
             margin: 20,
-            nav: true
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    autoplay: false
+                },
+                500: {
+                    items: 2
+                }
+            }
         }
     );
 
